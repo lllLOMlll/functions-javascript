@@ -21,15 +21,15 @@
 //     }
 // }
 
-function min(number1, number2) {
-    if (number1 < number2) return number1;
-    return number2;
-}
-
-// const min (num1, num2) => {
-//     if (num1 < num2) return num1;
-//     return num2
+// function min(number1, number2) {
+//     if (number1 < number2) return number1;
+//     return number2;
 // }
+
+const min = (num1, num2) => {
+    if (num1 < num2) return num1;
+    return num2
+}
 
 console.assert(min(0, 10) === 0);
 console.assert(min(0, -10) === -10);
