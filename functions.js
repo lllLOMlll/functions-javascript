@@ -68,6 +68,11 @@ function countChar(str, char) {
             countChar += 1;
         }
     }
+    return countChar;
+}
+
+function countBs(str) {
+    return countChar(str, "B");
 }
 
 console.assert(countChar("Bonjour", "o") === 2);
