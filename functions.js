@@ -91,8 +91,19 @@ function range(start, end, step = 1) {
   return rangeArray;
 }
 
-function sum(array)
+function sum(array) {
+    let total = 0;
+    let arrayLength = array.length;
+    for (let i = 0; i < arrayLength; i++) {
+        total += array[i];
+    }
+    return total;
+  
+}
+
+console.log(sum(range(1, 10))); 
+
 console.assert(JSON.stringify(range(1, 5)) === JSON.stringify([1, 2, 3, 4, 5]));
 console.assert(JSON.stringify(range(2, 5)) === JSON.stringify([2, 3, 4, 5]));
 console.assert(JSON.stringify(range(5, 2, -1)) === JSON.stringify([5,4,3,2]));
-//console.assert(sum(range(1, 10)) === 55);
+console.assert(sum(range(1, 10)) === 55);
