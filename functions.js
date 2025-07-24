@@ -1,17 +1,20 @@
-// function nameAge(name, age) {
-//     console.log("Hello " + name + "! You are " + age + " years old.");
-// }
+function nameAge(name, age) {
+    console.log("Hello " + name + "! You are " + age + " years old.");
+}
 
-// const nameAge2 = (name, age) => {
-//        console.log("Hello " + name + "! You are " + age + " years old.");
-// }
+const nameAge2 = (name, age) => {
+       console.log("Hello " + name + "! You are " + age + " years old.");
+}
 
-// let word = '-Olivier';
-// nameAge(`Louis${word}", 42`);
-// nameAge("Marie", 43);
+let word = '-Olivier';
 
-// nameAge("Victor", 10);
+nameAge(`Louis${word}", 42`);
+nameAge("Marie", 43);
+nameAge("Victor", 10);
 
+nameAge2("JP", 42);
+
+let nameArray = [];
 //************************************************************
 //MIN
 // function min(number1, number2) {
@@ -77,33 +80,33 @@
 
 //**************************************************************** */
 //Exercice 4 – Plage de nombres (range) et somme (sum)
-function range(start, end, step = 1) {
-  let rangeArray = [];
-  if (step < 0) {
-    for (let i = start; i >= end; i--) {
-      rangeArray.push(i);
-    }
-  } else if (step > 0) {
-    for (let i = start; i <= end; i++) {
-      rangeArray.push(i);
-    }
-  }
-  return rangeArray;
-}
+// function range(start, end, step = 1) {
+//   let rangeArray = [];
+//   if (step < 0) {
+//     for (let i = start; i >= end; i--) {
+//       rangeArray.push(i);
+//     }
+//   } else if (step > 0) {
+//     for (let i = start; i <= end; i++) {
+//       rangeArray.push(i);
+//     }
+//   }
+//   return rangeArray;
+// }
 
-function sum(array) {
-    let total = 0;
-    let arrayLength = array.length;
-    for (let i = 0; i < arrayLength; i++) {
-        total += array[i];
-    }
-    return total;
+// function sum(array) {
+//     let total = 0;
+//     let arrayLength = array.length;
+//     for (let i = 0; i < arrayLength; i++) {
+//         total += array[i];
+//     }
+//     return total;
   
-}
+// }
 
-console.log(sum(range(1, 10))); 
+// console.log(sum(range(1, 10))); 
 
-console.assert(JSON.stringify(range(1, 5)) === JSON.stringify([1, 2, 3, 4, 5]));
-console.assert(JSON.stringify(range(2, 5)) === JSON.stringify([2, 3, 4, 5]));
-console.assert(JSON.stringify(range(5, 2, -1)) === JSON.stringify([5,4,3,2]));
-console.assert(sum(range(1, 10)) === 55);
+// console.assert(JSON.stringify(range(1, 5)) === JSON.stringify([1, 2, 3, 4, 5]));
+// console.assert(JSON.stringify(range(2, 5)) === JSON.stringify([2, 3, 4, 5]));
+// console.assert(JSON.stringify(range(5, 2, -1)) === JSON.stringify([5,4,3,2]));
+// console.assert(sum(range(1, 10)) === 55);
