@@ -12,8 +12,7 @@
 
 // nameAge("Victor", 10);
 
-
-//************************************************************ 
+//************************************************************
 //MIN
 // function min(number1, number2) {
 //     if (number1 < number2) {
@@ -41,12 +40,11 @@
 // console.log(min1);
 // console.log(min2);
 
-
 //***************************
 //isEven(n)
 // function isEven(n) {
 //     if (n < 0) return isEven(-n)
-    
+
 //     if (n === 0) return true;
 //     if (n === 1) return false;
 
@@ -57,24 +55,44 @@
 // console.assert(isEven(75) === false);
 // console.assert(isEven(-1) === false);
 
-
-//************************************************ 
+//************************************************
 //Exercice 3 – Compter des caractères (countChar)
-function countChar(str, char) {
-    let strLenght = str.length;
-    let countChar = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] == char) {
-            countChar += 1;
-        }
+// function countChar(str, char) {
+//     let strLenght = str.length;
+//     let countChar = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] == char) {
+//             countChar += 1;
+//         }
+//     }
+//     return countChar;
+// }
+
+// function countBs(str) {
+//     return countChar(str, "B");
+// }
+
+// console.assert(countChar("Bonjour", "o") === 2);
+// console.assert(countBs("BBC") === 2);
+
+//**************************************************************** */
+//Exercice 4 – Plage de nombres (range) et somme (sum)
+function range(start, end, step = 1) {
+  let rangeArray = [];
+  if (step < 0) {
+    for (let i = start; i >= end; i--) {
+      rangeArray.push(i);
     }
-    return countChar;
+  } else if (step > 0) {
+    for (let i = start; i <= end; i++) {
+      rangeArray.push(i);
+    }
+  }
+  return rangeArray;
 }
 
-function countBs(str) {
-    return countChar(str, "B");
-}
-
-console.assert(countChar("Bonjour", "o") === 2);
-console.assert(countBs("BBC") === 2);
-
+function sum(array)
+console.assert(JSON.stringify(range(1, 5)) === JSON.stringify([1, 2, 3, 4, 5]));
+console.assert(JSON.stringify(range(2, 5)) === JSON.stringify([2, 3, 4, 5]));
+console.assert(JSON.stringify(range(5, 2, -1)) === JSON.stringify([5,4,3,2]));
+//console.assert(sum(range(1, 10)) === 55);
